@@ -13,6 +13,7 @@ namespace AvaliacaoDesktop
 {
     public partial class frmLogin : Form
     {
+        Timer t = new Timer();
         public frmLogin()
         {
             InitializeComponent();
@@ -69,6 +70,16 @@ namespace AvaliacaoDesktop
             else
             {
                 MessageBox.Show("Bem vindo", "Entrada");
+                if(txtUsuario.Text.Trim() == "admin" && txtSenha.Text.Trim() == "1234")
+                {
+                    frmPrincipalA telaPrincipalA = new frmPrincipalA();
+                    telaPrincipalA.ShowDialog();
+                }
+                else
+                {
+                    frmPrincipalU telaPrincipalU = new frmPrincipalU();
+                    telaPrincipalU.ShowDialog();
+                }
             }
         }
 
@@ -79,8 +90,11 @@ namespace AvaliacaoDesktop
 
         private void btnNovoUsuario_Click(object sender, EventArgs e)
         {
-            txtUsuario.Clear();
-            txtSenha.Clear();
+            //txtUsuario.Clear();
+            //txtSenha.Clear();
+
+            frmCadastroUsuario novoUsuario = new frmCadastroUsuario();
+            novoUsuario.Show();
         }
 
         private void btImage_Click(object sender, EventArgs e)
@@ -104,5 +118,53 @@ namespace AvaliacaoDesktop
                 fotoPictureBox1.BackgroundImage = Image.FromFile(logo.FileName);
             }
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            t.Interval = 5000;
+
+            t.Tick += new EventHandler(this.timer1_Tick);
+            t.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            int hh = DateTime.Now.Hour;
+            int mm = DateTime.Now.Minute;
+            int ss = DateTime.Now.Second;
+
+            string time = "";
+
+            if(hh < 10)
+            {
+                time += "0" + hh;
+            }
+            else
+            {
+                time += hh;
+            }
+            time += ":";
+
+            if(mm < 10)
+            {
+                time += "0" + mm;
+            }
+            else
+            {
+                time += mm;
+            }
+            time += ":";
+
+            if(ss < 10)
+            {
+                time += "0" + ss;
+            }
+            else 
+            {
+                time += ss;
+            }
+            lblTimer.Text = time;
+        }
+
     }
 }

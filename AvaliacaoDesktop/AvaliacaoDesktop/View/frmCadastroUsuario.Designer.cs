@@ -143,6 +143,7 @@
             // 
             this.SenhaTextBox.Location = new System.Drawing.Point(161, 289);
             this.SenhaTextBox.Name = "SenhaTextBox";
+            this.SenhaTextBox.PasswordChar = '*';
             this.SenhaTextBox.Size = new System.Drawing.Size(167, 22);
             this.SenhaTextBox.TabIndex = 11;
             // 
@@ -150,6 +151,7 @@
             // 
             this.ConfirmaSenhaTextBox.Location = new System.Drawing.Point(161, 353);
             this.ConfirmaSenhaTextBox.Name = "ConfirmaSenhaTextBox";
+            this.ConfirmaSenhaTextBox.PasswordChar = '*';
             this.ConfirmaSenhaTextBox.Size = new System.Drawing.Size(167, 22);
             this.ConfirmaSenhaTextBox.TabIndex = 12;
             // 
@@ -195,7 +197,7 @@
             // 
             this.DataTextBox.Location = new System.Drawing.Point(161, 163);
             this.DataTextBox.Name = "DataTextBox";
-            this.DataTextBox.Size = new System.Drawing.Size(200, 22);
+            this.DataTextBox.Size = new System.Drawing.Size(266, 22);
             this.DataTextBox.TabIndex = 17;
             // 
             // checkBoxAdmin

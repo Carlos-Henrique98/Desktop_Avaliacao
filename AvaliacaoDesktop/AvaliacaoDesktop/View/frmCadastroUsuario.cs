@@ -92,7 +92,6 @@ namespace AvaliacaoDesktop
                     repository.adicionar(usuario);
 
                     MessageBox.Show("Dados Salvos.","Aviso", MessageBoxButtons.OK,MessageBoxIcon.Information);
-
                 } 
             }
             else
@@ -113,7 +112,12 @@ namespace AvaliacaoDesktop
                 {
                     MessageBox.Show("Campo de senha não inserido");
                 }
-             
+            }
+
+            //ERRADO
+            if(SenhaTextBox.Text.Trim() == ConfirmaSenhaTextBox.Text.Trim())
+            {
+                MessageBox.Show("Os campos da senhas não iguais");
             }
         }
 

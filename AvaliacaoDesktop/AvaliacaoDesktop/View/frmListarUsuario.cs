@@ -16,5 +16,22 @@ namespace AvaliacaoDesktop
         {
             InitializeComponent();
         }
+
+        private void tbxSenha_TextChanged(object sender, EventArgs e)
+        {
+            string senhaValida = "[]";
+            
+        }
+
+        private void NovoBtn_Click(object sender, EventArgs e)
+        {
+            tbxNome.Clear();
+            tbxSobrenome.Clear();
+            tbxEndereco.Clear();
+            tbxNumero.Clear();
+            tbxUsuario.Clear();
+            tbxSenha.Clear();
+            tbxConfirSenha.Clear();
+        }
     }
 }

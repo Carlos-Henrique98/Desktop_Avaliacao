@@ -36,29 +36,29 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.VoltarBtn = new System.Windows.Forms.Button();
+            this.DeletaBtn = new System.Windows.Forms.Button();
+            this.EditarBtn = new System.Windows.Forms.Button();
+            this.NovoBtn = new System.Windows.Forms.Button();
+            this.tbxNome = new System.Windows.Forms.TextBox();
+            this.tbxSobrenome = new System.Windows.Forms.TextBox();
+            this.tbxEndereco = new System.Windows.Forms.TextBox();
+            this.tbxNumero = new System.Windows.Forms.TextBox();
+            this.tbxUsuario = new System.Windows.Forms.TextBox();
+            this.tbxSenha = new System.Windows.Forms.TextBox();
+            this.tbxConfirSenha = new System.Windows.Forms.TextBox();
+            this.pcbImage = new System.Windows.Forms.PictureBox();
+            this.AlterarBtn = new System.Windows.Forms.Button();
+            this.DeletarBtn = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.NomeTxt = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.iDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobrenomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImage)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(498, 231);
+            this.label2.Location = new System.Drawing.Point(498, 226);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 17);
             this.label2.TabIndex = 1;
@@ -83,7 +83,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(498, 271);
+            this.label3.Location = new System.Drawing.Point(498, 261);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 17);
             this.label3.TabIndex = 2;
@@ -92,7 +92,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(498, 311);
+            this.label4.Location = new System.Drawing.Point(498, 296);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 17);
             this.label4.TabIndex = 3;
@@ -101,7 +101,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(498, 351);
+            this.label5.Location = new System.Drawing.Point(498, 331);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 17);
             this.label5.TabIndex = 4;
@@ -110,7 +110,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(498, 391);
+            this.label6.Location = new System.Drawing.Point(499, 366);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 17);
             this.label6.TabIndex = 5;
@@ -119,7 +119,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(498, 431);
+            this.label7.Location = new System.Drawing.Point(499, 401);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 17);
             this.label7.TabIndex = 6;
@@ -128,129 +128,124 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(498, 471);
+            this.label8.Location = new System.Drawing.Point(498, 436);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(114, 17);
             this.label8.TabIndex = 7;
             this.label8.Text = "Confirmar Senha";
             // 
-            // button1
+            // VoltarBtn
             // 
-            this.button1.Location = new System.Drawing.Point(430, 537);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 37);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Voltar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.VoltarBtn.Location = new System.Drawing.Point(430, 537);
+            this.VoltarBtn.Name = "VoltarBtn";
+            this.VoltarBtn.Size = new System.Drawing.Size(75, 37);
+            this.VoltarBtn.TabIndex = 8;
+            this.VoltarBtn.Text = "Voltar";
+            this.VoltarBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // DeletaBtn
             // 
-            this.button2.Location = new System.Drawing.Point(742, 537);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 37);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Deletar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.DeletaBtn.Location = new System.Drawing.Point(742, 537);
+            this.DeletaBtn.Name = "DeletaBtn";
+            this.DeletaBtn.Size = new System.Drawing.Size(75, 37);
+            this.DeletaBtn.TabIndex = 9;
+            this.DeletaBtn.Text = "Deletar";
+            this.DeletaBtn.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // EditarBtn
             // 
-            this.button3.Location = new System.Drawing.Point(649, 537);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 37);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Editar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.EditarBtn.Location = new System.Drawing.Point(649, 537);
+            this.EditarBtn.Name = "EditarBtn";
+            this.EditarBtn.Size = new System.Drawing.Size(75, 37);
+            this.EditarBtn.TabIndex = 10;
+            this.EditarBtn.Text = "Editar";
+            this.EditarBtn.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // NovoBtn
             // 
-            this.button4.Location = new System.Drawing.Point(556, 537);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 37);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Novo";
-            this.button4.UseVisualStyleBackColor = true;
+            this.NovoBtn.Location = new System.Drawing.Point(556, 537);
+            this.NovoBtn.Name = "NovoBtn";
+            this.NovoBtn.Size = new System.Drawing.Size(75, 37);
+            this.NovoBtn.TabIndex = 11;
+            this.NovoBtn.Text = "Novo";
+            this.NovoBtn.UseVisualStyleBackColor = true;
+            this.NovoBtn.Click += new System.EventHandler(this.NovoBtn_Click);
             // 
-            // textBox1
+            // tbxNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(628, 191);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 22);
-            this.textBox1.TabIndex = 12;
+            this.tbxNome.Location = new System.Drawing.Point(628, 191);
+            this.tbxNome.Name = "tbxNome";
+            this.tbxNome.Size = new System.Drawing.Size(190, 22);
+            this.tbxNome.TabIndex = 12;
             // 
-            // textBox2
+            // tbxSobrenome
             // 
-            this.textBox2.Location = new System.Drawing.Point(628, 230);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(190, 22);
-            this.textBox2.TabIndex = 13;
+            this.tbxSobrenome.Location = new System.Drawing.Point(628, 226);
+            this.tbxSobrenome.Name = "tbxSobrenome";
+            this.tbxSobrenome.Size = new System.Drawing.Size(190, 22);
+            this.tbxSobrenome.TabIndex = 13;
             // 
-            // textBox3
+            // tbxEndereco
             // 
-            this.textBox3.Location = new System.Drawing.Point(628, 267);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(190, 22);
-            this.textBox3.TabIndex = 14;
+            this.tbxEndereco.Location = new System.Drawing.Point(628, 261);
+            this.tbxEndereco.Name = "tbxEndereco";
+            this.tbxEndereco.Size = new System.Drawing.Size(190, 22);
+            this.tbxEndereco.TabIndex = 14;
             // 
-            // textBox4
+            // tbxNumero
             // 
-            this.textBox4.Location = new System.Drawing.Point(628, 306);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(190, 22);
-            this.textBox4.TabIndex = 15;
+            this.tbxNumero.Location = new System.Drawing.Point(628, 331);
+            this.tbxNumero.Name = "tbxNumero";
+            this.tbxNumero.Size = new System.Drawing.Size(190, 22);
+            this.tbxNumero.TabIndex = 16;
             // 
-            // textBox5
+            // tbxUsuario
             // 
-            this.textBox5.Location = new System.Drawing.Point(628, 351);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(190, 22);
-            this.textBox5.TabIndex = 16;
+            this.tbxUsuario.Location = new System.Drawing.Point(628, 366);
+            this.tbxUsuario.Name = "tbxUsuario";
+            this.tbxUsuario.Size = new System.Drawing.Size(190, 22);
+            this.tbxUsuario.TabIndex = 17;
             // 
-            // textBox6
+            // tbxSenha
             // 
-            this.textBox6.Location = new System.Drawing.Point(628, 391);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(190, 22);
-            this.textBox6.TabIndex = 17;
+            this.tbxSenha.Location = new System.Drawing.Point(628, 401);
+            this.tbxSenha.Name = "tbxSenha";
+            this.tbxSenha.Size = new System.Drawing.Size(190, 22);
+            this.tbxSenha.TabIndex = 18;
+            this.tbxSenha.TextChanged += new System.EventHandler(this.tbxSenha_TextChanged);
             // 
-            // textBox7
+            // tbxConfirSenha
             // 
-            this.textBox7.Location = new System.Drawing.Point(628, 431);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(190, 22);
-            this.textBox7.TabIndex = 18;
+            this.tbxConfirSenha.Location = new System.Drawing.Point(628, 436);
+            this.tbxConfirSenha.Name = "tbxConfirSenha";
+            this.tbxConfirSenha.Size = new System.Drawing.Size(190, 22);
+            this.tbxConfirSenha.TabIndex = 19;
             // 
-            // textBox8
+            // pcbImage
             // 
-            this.textBox8.Location = new System.Drawing.Point(628, 471);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(190, 22);
-            this.textBox8.TabIndex = 19;
+            this.pcbImage.Location = new System.Drawing.Point(649, 33);
+            this.pcbImage.Name = "pcbImage";
+            this.pcbImage.Size = new System.Drawing.Size(156, 90);
+            this.pcbImage.TabIndex = 20;
+            this.pcbImage.TabStop = false;
             // 
-            // pictureBox1
+            // AlterarBtn
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(649, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(156, 90);
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
+            this.AlterarBtn.Location = new System.Drawing.Point(649, 137);
+            this.AlterarBtn.Name = "AlterarBtn";
+            this.AlterarBtn.Size = new System.Drawing.Size(75, 34);
+            this.AlterarBtn.TabIndex = 21;
+            this.AlterarBtn.Text = "Alterar";
+            this.AlterarBtn.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // DeletarBtn
             // 
-            this.button5.Location = new System.Drawing.Point(649, 137);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 34);
-            this.button5.TabIndex = 21;
-            this.button5.Text = "Alterar";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(730, 137);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 34);
-            this.button6.TabIndex = 22;
-            this.button6.Text = "Deletar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.DeletarBtn.Location = new System.Drawing.Point(730, 137);
+            this.DeletarBtn.Name = "DeletarBtn";
+            this.DeletarBtn.Size = new System.Drawing.Size(75, 34);
+            this.DeletarBtn.TabIndex = 22;
+            this.DeletarBtn.Text = "Deletar";
+            this.DeletarBtn.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -262,12 +257,12 @@
             this.label9.TabIndex = 23;
             this.label9.Text = "Dados Pessoais";
             // 
-            // textBox9
+            // NomeTxt
             // 
-            this.textBox9.Location = new System.Drawing.Point(121, 537);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(216, 22);
-            this.textBox9.TabIndex = 24;
+            this.NomeTxt.Location = new System.Drawing.Point(121, 537);
+            this.NomeTxt.Name = "NomeTxt";
+            this.NomeTxt.Size = new System.Drawing.Size(216, 22);
+            this.NomeTxt.TabIndex = 24;
             // 
             // label10
             // 
@@ -310,29 +305,36 @@
             this.sobrenomeToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
             this.sobrenomeToolStripMenuItem.Text = "Sobrenome";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(628, 296);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(190, 22);
+            this.dateTimePicker1.TabIndex = 28;
+            // 
             // frmListarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 601);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.NomeTxt);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.DeletarBtn);
+            this.Controls.Add(this.AlterarBtn);
+            this.Controls.Add(this.pcbImage);
+            this.Controls.Add(this.tbxConfirSenha);
+            this.Controls.Add(this.tbxSenha);
+            this.Controls.Add(this.tbxUsuario);
+            this.Controls.Add(this.tbxNumero);
+            this.Controls.Add(this.tbxEndereco);
+            this.Controls.Add(this.tbxSobrenome);
+            this.Controls.Add(this.tbxNome);
+            this.Controls.Add(this.NovoBtn);
+            this.Controls.Add(this.EditarBtn);
+            this.Controls.Add(this.DeletaBtn);
+            this.Controls.Add(this.VoltarBtn);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -342,10 +344,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmListarUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listar usuários - AirSystem";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImage)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -363,27 +367,27 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button VoltarBtn;
+        private System.Windows.Forms.Button DeletaBtn;
+        private System.Windows.Forms.Button EditarBtn;
+        private System.Windows.Forms.Button NovoBtn;
+        private System.Windows.Forms.TextBox tbxNome;
+        private System.Windows.Forms.TextBox tbxSobrenome;
+        private System.Windows.Forms.TextBox tbxEndereco;
+        private System.Windows.Forms.TextBox tbxNumero;
+        private System.Windows.Forms.TextBox tbxUsuario;
+        private System.Windows.Forms.TextBox tbxSenha;
+        private System.Windows.Forms.TextBox tbxConfirSenha;
+        private System.Windows.Forms.PictureBox pcbImage;
+        private System.Windows.Forms.Button AlterarBtn;
+        private System.Windows.Forms.Button DeletarBtn;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox NomeTxt;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem iDToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nomeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobrenomeToolStripMenuItem;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

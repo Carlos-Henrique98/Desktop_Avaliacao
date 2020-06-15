@@ -12,12 +12,14 @@ namespace AvaliacaoDesktop
 
         public string nome { get; set; }
 
-        public string email { get; set; }
+        public string sobrenome { get; set; }
+
+        public string endereco { get; set; }
 
         public string usuario { get; set; }
 
         public string senha { get; set; }
 
-        public string telefone { get; set; }
+        public string confirmaSenha { get; set; }
     }
 }

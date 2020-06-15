@@ -34,13 +34,20 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.NomeTextBox = new System.Windows.Forms.TextBox();
+            this.SobrenomeTextBox = new System.Windows.Forms.TextBox();
+            this.EnderecoTextBox = new System.Windows.Forms.TextBox();
+            this.NumeroTextBox = new System.Windows.Forms.TextBox();
+            this.UsuarioTextBox = new System.Windows.Forms.TextBox();
+            this.SenhaTextBox = new System.Windows.Forms.TextBox();
+            this.ConfirmaSenhaTextBox = new System.Windows.Forms.TextBox();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnDelet = new System.Windows.Forms.Button();
+            this.ImageUsuario_Box = new System.Windows.Forms.PictureBox();
+            this.DataTextBox = new System.Windows.Forms.DateTimePicker();
+            this.checkBoxAdmin = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageUsuario_Box)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -97,72 +104,128 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Confirmar Senha";
             // 
-            // textBox1
+            // NomeTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(161, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 22);
-            this.textBox1.TabIndex = 6;
-            
+            this.NomeTextBox.Location = new System.Drawing.Point(161, 49);
+            this.NomeTextBox.Name = "NomeTextBox";
+            this.NomeTextBox.Size = new System.Drawing.Size(167, 22);
+            this.NomeTextBox.TabIndex = 6;
             // 
-            // textBox2
+            // SobrenomeTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(345, 49);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 22);
-            this.textBox2.TabIndex = 7;
+            this.SobrenomeTextBox.Location = new System.Drawing.Point(345, 49);
+            this.SobrenomeTextBox.Name = "SobrenomeTextBox";
+            this.SobrenomeTextBox.Size = new System.Drawing.Size(183, 22);
+            this.SobrenomeTextBox.TabIndex = 7;
             // 
-            // textBox3
+            // EnderecoTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(161, 101);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(266, 22);
-            this.textBox3.TabIndex = 8;
-
+            this.EnderecoTextBox.Location = new System.Drawing.Point(161, 101);
+            this.EnderecoTextBox.Name = "EnderecoTextBox";
+            this.EnderecoTextBox.Size = new System.Drawing.Size(266, 22);
+            this.EnderecoTextBox.TabIndex = 8;
             // 
-            // textBox4
+            // NumeroTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(444, 101);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(83, 22);
-            this.textBox4.TabIndex = 9;
+            this.NumeroTextBox.Location = new System.Drawing.Point(444, 101);
+            this.NumeroTextBox.Name = "NumeroTextBox";
+            this.NumeroTextBox.Size = new System.Drawing.Size(83, 22);
+            this.NumeroTextBox.TabIndex = 9;
             // 
-            // textBox5
+            // UsuarioTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(161, 225);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(167, 22);
-            this.textBox5.TabIndex = 10;
-     
+            this.UsuarioTextBox.Location = new System.Drawing.Point(161, 225);
+            this.UsuarioTextBox.Name = "UsuarioTextBox";
+            this.UsuarioTextBox.Size = new System.Drawing.Size(167, 22);
+            this.UsuarioTextBox.TabIndex = 10;
             // 
-            // textBox6
+            // SenhaTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(161, 289);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(167, 22);
-            this.textBox6.TabIndex = 11;
-         
+            this.SenhaTextBox.Location = new System.Drawing.Point(161, 289);
+            this.SenhaTextBox.Name = "SenhaTextBox";
+            this.SenhaTextBox.Size = new System.Drawing.Size(167, 22);
+            this.SenhaTextBox.TabIndex = 11;
             // 
-            // textBox7
+            // ConfirmaSenhaTextBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(162, 353);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(167, 22);
-            this.textBox7.TabIndex = 12;
-           
+            this.ConfirmaSenhaTextBox.Location = new System.Drawing.Point(161, 353);
+            this.ConfirmaSenhaTextBox.Name = "ConfirmaSenhaTextBox";
+            this.ConfirmaSenhaTextBox.Size = new System.Drawing.Size(167, 22);
+            this.ConfirmaSenhaTextBox.TabIndex = 12;
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Location = new System.Drawing.Point(161, 422);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(96, 32);
+            this.btnCadastrar.TabIndex = 13;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Location = new System.Drawing.Point(595, 188);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(75, 30);
+            this.btnAlterar.TabIndex = 14;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // btnDelet
+            // 
+            this.btnDelet.Location = new System.Drawing.Point(692, 187);
+            this.btnDelet.Name = "btnDelet";
+            this.btnDelet.Size = new System.Drawing.Size(75, 30);
+            this.btnDelet.TabIndex = 15;
+            this.btnDelet.Text = "Deletar";
+            this.btnDelet.UseVisualStyleBackColor = true;
+            this.btnDelet.Click += new System.EventHandler(this.btnDelet_Click);
+            // 
+            // ImageUsuario_Box
+            // 
+            this.ImageUsuario_Box.Location = new System.Drawing.Point(595, 53);
+            this.ImageUsuario_Box.Name = "ImageUsuario_Box";
+            this.ImageUsuario_Box.Size = new System.Drawing.Size(170, 111);
+            this.ImageUsuario_Box.TabIndex = 16;
+            this.ImageUsuario_Box.TabStop = false;
+            // 
+            // DataTextBox
+            // 
+            this.DataTextBox.Location = new System.Drawing.Point(161, 163);
+            this.DataTextBox.Name = "DataTextBox";
+            this.DataTextBox.Size = new System.Drawing.Size(200, 22);
+            this.DataTextBox.TabIndex = 17;
+            // 
+            // checkBoxAdmin
+            // 
+            this.checkBoxAdmin.AutoSize = true;
+            this.checkBoxAdmin.Location = new System.Drawing.Point(595, 259);
+            this.checkBoxAdmin.Name = "checkBoxAdmin";
+            this.checkBoxAdmin.Size = new System.Drawing.Size(89, 21);
+            this.checkBoxAdmin.TabIndex = 18;
+            this.checkBoxAdmin.Text = "É admin?";
+            this.checkBoxAdmin.UseVisualStyleBackColor = true;
             // 
             // frmCadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(800, 476);
+            this.Controls.Add(this.checkBoxAdmin);
+            this.Controls.Add(this.DataTextBox);
+            this.Controls.Add(this.ImageUsuario_Box);
+            this.Controls.Add(this.btnDelet);
+            this.Controls.Add(this.btnAlterar);
+            this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.ConfirmaSenhaTextBox);
+            this.Controls.Add(this.SenhaTextBox);
+            this.Controls.Add(this.UsuarioTextBox);
+            this.Controls.Add(this.NumeroTextBox);
+            this.Controls.Add(this.EnderecoTextBox);
+            this.Controls.Add(this.SobrenomeTextBox);
+            this.Controls.Add(this.NomeTextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -170,8 +233,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmCadastroUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novo usuário - AirSystem";
-         
+            this.Load += new System.EventHandler(this.frmCadastroUsuario_Load);
+            this.Enter += new System.EventHandler(this.frmCadastroUsuario_Enter);
+            this.Leave += new System.EventHandler(this.frmCadastroUsuario_Leave);
+            ((System.ComponentModel.ISupportInitialize)(this.ImageUsuario_Box)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,12 +252,18 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox NomeTextBox;
+        private System.Windows.Forms.TextBox SobrenomeTextBox;
+        private System.Windows.Forms.TextBox EnderecoTextBox;
+        private System.Windows.Forms.TextBox NumeroTextBox;
+        private System.Windows.Forms.TextBox UsuarioTextBox;
+        private System.Windows.Forms.TextBox SenhaTextBox;
+        private System.Windows.Forms.TextBox ConfirmaSenhaTextBox;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnDelet;
+        private System.Windows.Forms.PictureBox ImageUsuario_Box;
+        private System.Windows.Forms.DateTimePicker DataTextBox;
+        private System.Windows.Forms.CheckBox checkBoxAdmin;
     }
 }

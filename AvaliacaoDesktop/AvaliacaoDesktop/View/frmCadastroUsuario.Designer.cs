@@ -224,10 +224,13 @@
             // 
             // DataTextBox
             // 
-            this.DataTextBox.Location = new System.Drawing.Point(161, 163);
+            this.DataTextBox.CustomFormat = "dd-MM-yyyy";
+            this.DataTextBox.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DataTextBox.Location = new System.Drawing.Point(162, 164);
             this.DataTextBox.Name = "DataTextBox";
-            this.DataTextBox.Size = new System.Drawing.Size(266, 22);
+            this.DataTextBox.Size = new System.Drawing.Size(109, 22);
             this.DataTextBox.TabIndex = 17;
+            this.DataTextBox.ValueChanged += new System.EventHandler(this.DataTextBox_ValueChanged);
             // 
             // cbxAdmin
             // 

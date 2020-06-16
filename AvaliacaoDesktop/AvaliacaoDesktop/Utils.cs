@@ -13,12 +13,12 @@ namespace AvaliacaoDesktop
         {
             foreach(Control c in form.Controls)
             {
-                TextBox tbx = c as TextBox;
-
+               TextBox tbx = c as TextBox;
+        
                 if(tbx != null && tbx.Text.Trim().Length == 0)
-                {
+              {
                     return true;
-                }
+                 }
             }
             return false;
         }

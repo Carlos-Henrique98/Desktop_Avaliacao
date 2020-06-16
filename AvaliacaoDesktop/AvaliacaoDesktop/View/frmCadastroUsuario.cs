@@ -30,10 +30,6 @@ namespace AvaliacaoDesktop
             {
                 MessageBox.Show("Português");
             }
-
-           
-
-
         }
 
         private void frmCadastroUsuario_Enter(object sender, EventArgs e)
@@ -80,30 +76,33 @@ namespace AvaliacaoDesktop
         {
             if(!Utils.temCamposVazio(this))
             {
-                    Usuario usuario = new Usuario
-                    {
-                        nome = NomeTextBox.Text,
-                        sobrenome = SobrenomeTextBox.Text,
-                        usuario = UsuarioTextBox.Text,
-                        senha = SenhaTextBox.Text,
-                        confirmaSenha = ConfirmaSenhaTextBox.Text
-                        
-                    };
-                    UsuarioRepository repository = new UsuarioRepository();
-                    repository.adicionar(usuario);
+                Usuario usuario = new Usuario
+                {
+                    nome = NomeTextBox.Text,
+                    sobrenome = SobrenomeTextBox.Text,
+                    usuario = UsuarioTextBox.Text,
+                    senha = SenhaTextBox.Text,
+                    confirmaSenha = ConfirmaSenhaTextBox.Text
+                };
+                UsuarioRepository repository = new UsuarioRepository();
+                repository.adicionar(usuario);
 
-                    MessageBox.Show("Dados Salvos.","Aviso", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Dados Salvos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else
-            {
-                MessageBox.Show("Todos os campos são obrigatórios.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-            //ERRADO
-            if(SenhaTextBox.Text.Trim() != ConfirmaSenhaTextBox.Text.Trim())
-            {
-                MessageBox.Show("Os campos da senha não são iguais");
-            }
+           
+                else if(NomeTextBox.Text.Trim().Length == 0 || SobrenomeTextBox.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Campos não preenchidos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if(UsuarioTextBox.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Campos não preenchidos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if(SenhaTextBox.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Campos não preenchidos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            
         }
 
         private void btnDelet_Click(object sender, EventArgs e)
@@ -271,6 +270,11 @@ namespace AvaliacaoDesktop
             {
                 e.Cancel = true;
             }
+        }
+
+        private void DataTextBox_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

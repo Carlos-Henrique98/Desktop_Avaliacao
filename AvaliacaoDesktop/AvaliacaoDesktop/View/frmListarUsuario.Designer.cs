@@ -57,9 +57,12 @@
             this.iDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobrenomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImage)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -142,6 +145,7 @@
             this.VoltarBtn.TabIndex = 8;
             this.VoltarBtn.Text = "Voltar";
             this.VoltarBtn.UseVisualStyleBackColor = true;
+            this.VoltarBtn.Click += new System.EventHandler(this.VoltarBtn_Click);
             // 
             // DeletaBtn
             // 
@@ -223,6 +227,8 @@
             // 
             // pcbImage
             // 
+            this.pcbImage.BackgroundImage = global::AvaliacaoDesktop.Properties.Resources.Air;
+            this.pcbImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcbImage.Location = new System.Drawing.Point(649, 33);
             this.pcbImage.Name = "pcbImage";
             this.pcbImage.Size = new System.Drawing.Size(156, 90);
@@ -280,7 +286,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.iDToolStripMenuItem,
             this.nomeToolStripMenuItem,
-            this.sobrenomeToolStripMenuItem});
+            this.sobrenomeToolStripMenuItem,
+            this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(875, 28);
@@ -305,6 +312,12 @@
             this.sobrenomeToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
             this.sobrenomeToolStripMenuItem.Text = "Sobrenome";
             // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(48, 24);
+            this.sairToolStripMenuItem.Text = "Sair";
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(628, 296);
@@ -312,11 +325,22 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(190, 22);
             this.dateTimePicker1.TabIndex = 28;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 31);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(470, 458);
+            this.dataGridView1.TabIndex = 29;
+            // 
             // frmListarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 601);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.NomeTxt);
@@ -352,6 +376,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbImage)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,5 +414,7 @@
         private System.Windows.Forms.ToolStripMenuItem nomeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobrenomeToolStripMenuItem;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
     }
 }

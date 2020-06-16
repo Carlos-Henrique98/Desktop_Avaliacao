@@ -16,6 +16,8 @@ namespace AvaliacaoDesktop
 
         public string endereco { get; set; }
 
+        public string numero { get; set; }
+
         public string usuario { get; set; }
 
         public string senha { get; set; }

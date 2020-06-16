@@ -17,30 +17,6 @@ namespace AvaliacaoDesktop.Repositories
             if(usuarios == null)
             {
                 usuarios = new List<Usuario>();
-
-                usuarios.Add(new Usuario
-                {
-                    codigo = 1,
-                    nome = "Fernando",
-                    sobrenome = "Henrique",
-                    usuario = "FerHenri",
-                    senha = "123456",
-                    confirmaSenha = "123456"
-                }
-                );
-                contador++;
-                usuarios.Add(new Usuario
-                {
-                    codigo = 2,
-                    nome = "Magali",
-                    sobrenome = "Dias",
-                    usuario = "Mag",
-                    senha = "Mag2020",
-                    confirmaSenha = "Mag2020"
-                }
-              );
-                contador++;
-
             }
         }
 

@@ -55,8 +55,10 @@ namespace AvaliacaoDesktop
 
         }
 
+        public static int idioma;
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            idioma = cblIdioma.SelectedIndex;
             if(txtUsuario.Text.Trim().Length == 0)
             {
                 SystemSounds.Beep.Play();
@@ -66,6 +68,11 @@ namespace AvaliacaoDesktop
             {
                 SystemSounds.Beep.Play();
                 MessageBox.Show("Digite a senha", "Erro");
+            }
+            else if(cblIdioma.Text.Trim().Length == 0)
+            {
+                SystemSounds.Beep.Play();
+                MessageBox.Show("Campo do idioma não preenchido", "Erro");
             }
             else
             {
@@ -90,9 +97,6 @@ namespace AvaliacaoDesktop
 
         private void btnNovoUsuario_Click(object sender, EventArgs e)
         {
-            //txtUsuario.Clear();
-            //txtSenha.Clear();
-
             frmCadastroUsuario novoUsuario = new frmCadastroUsuario();
             novoUsuario.Show();
         }

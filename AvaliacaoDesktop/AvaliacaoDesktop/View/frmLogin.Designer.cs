@@ -43,7 +43,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblTimer = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbIdioma = new System.Windows.Forms.ComboBox();
+            this.cblIdioma = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnEntrar
@@ -99,6 +99,7 @@
             // 
             // fotoPictureBox
             // 
+            this.fotoPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.fotoPictureBox.Location = new System.Drawing.Point(32, 35);
             this.fotoPictureBox.Name = "fotoPictureBox";
             this.fotoPictureBox.Size = new System.Drawing.Size(346, 348);
@@ -106,6 +107,7 @@
             // 
             // fotoPictureBox1
             // 
+            this.fotoPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.fotoPictureBox1.Location = new System.Drawing.Point(472, 35);
             this.fotoPictureBox1.Name = "fotoPictureBox1";
             this.fotoPictureBox1.Size = new System.Drawing.Size(261, 82);
@@ -174,23 +176,24 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Idioma";
             // 
-            // cbIdioma
+            // cblIdioma
             // 
-            this.cbIdioma.FormattingEnabled = true;
-            this.cbIdioma.Items.AddRange(new object[] {
+            this.cblIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cblIdioma.FormattingEnabled = true;
+            this.cblIdioma.Items.AddRange(new object[] {
             "Português",
             "Inglês"});
-            this.cbIdioma.Location = new System.Drawing.Point(471, 328);
-            this.cbIdioma.Name = "cbIdioma";
-            this.cbIdioma.Size = new System.Drawing.Size(180, 24);
-            this.cbIdioma.TabIndex = 15;
+            this.cblIdioma.Location = new System.Drawing.Point(471, 328);
+            this.cblIdioma.Name = "cblIdioma";
+            this.cblIdioma.Size = new System.Drawing.Size(180, 24);
+            this.cblIdioma.TabIndex = 15;
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cbIdioma);
+            this.Controls.Add(this.cblIdioma);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.btLogo);
@@ -229,7 +232,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbIdioma;
+        private System.Windows.Forms.ComboBox cblIdioma;
     }
 }
 

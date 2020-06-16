@@ -25,13 +25,16 @@ namespace AvaliacaoDesktop
 
         private void NovoBtn_Click(object sender, EventArgs e)
         {
-            tbxNome.Clear();
-            tbxSobrenome.Clear();
-            tbxEndereco.Clear();
-            tbxNumero.Clear();
-            tbxUsuario.Clear();
-            tbxSenha.Clear();
-            tbxConfirSenha.Clear();
+            frmCadastroUsuario cadastroUsuario = new frmCadastroUsuario();
+            cadastroUsuario.Show();
         }
+
+        private void VoltarBtn_Click(object sender, EventArgs e)
+        {
+            frmPrincipalU principalU = new frmPrincipalU();
+            principalU.Show();
+        }
+
+     
     }
 }

@@ -17,6 +17,31 @@ namespace AvaliacaoDesktop.Repositories
             if(usuarios == null)
             {
                 usuarios = new List<Usuario>();
+
+                usuarios.Add(new Usuario
+                {
+                    codigo = 1,
+                    nome = "Gabriel",
+                    sobrenome = "Santos",
+                    dataNascimento = Convert.ToDateTime("09/02/1968"),
+                    endereco = "Gasometro",
+                    numero = "543",
+                    usuario = "admin",
+                    senha = "12345",
+                });
+                contador++;
+                usuarios.Add(new Usuario
+                {
+                   codigo = 2,
+                   nome = "Guilherme",
+                   sobrenome = "Borges",
+                   dataNascimento = Convert.ToDateTime("16/08/2000"),
+                   endereco = "Av. Paulista",
+                   numero = "123",
+                   usuario = "comum",
+                   senha = "54321",
+                });
+                contador++;
             }
         }
 
@@ -43,6 +68,11 @@ namespace AvaliacaoDesktop.Repositories
         {
             Usuario usuario = usuarios.Find(x => x.codigo == codigo);
             usuarios.Remove(usuario);
+        }
+
+        public Usuario BuscarPorId(int codigo)
+        {
+            return usuarios.FirstOrDefault(x => x.codigo == codigo);
         }
     }
 }

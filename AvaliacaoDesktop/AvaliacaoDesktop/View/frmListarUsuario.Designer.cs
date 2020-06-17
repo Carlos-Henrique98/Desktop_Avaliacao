@@ -58,11 +58,11 @@
             this.nomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobrenomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
+            this.dgvListarUsuario = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImage)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -155,6 +155,7 @@
             this.DeletaBtn.TabIndex = 9;
             this.DeletaBtn.Text = "Deletar";
             this.DeletaBtn.UseVisualStyleBackColor = true;
+            this.DeletaBtn.Click += new System.EventHandler(this.DeletaBtn_Click);
             // 
             // EditarBtn
             // 
@@ -164,6 +165,7 @@
             this.EditarBtn.TabIndex = 10;
             this.EditarBtn.Text = "Editar";
             this.EditarBtn.UseVisualStyleBackColor = true;
+            this.EditarBtn.Click += new System.EventHandler(this.EditarBtn_Click);
             // 
             // NovoBtn
             // 
@@ -216,7 +218,6 @@
             this.tbxSenha.Name = "tbxSenha";
             this.tbxSenha.Size = new System.Drawing.Size(190, 22);
             this.tbxSenha.TabIndex = 18;
-            this.tbxSenha.TextChanged += new System.EventHandler(this.tbxSenha_TextChanged);
             // 
             // tbxConfirSenha
             // 
@@ -318,30 +319,32 @@
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(48, 24);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
-            // dateTimePicker1
+            // dtpNascimento
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(628, 296);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(190, 22);
-            this.dateTimePicker1.TabIndex = 28;
+            this.dtpNascimento.Location = new System.Drawing.Point(628, 296);
+            this.dtpNascimento.Name = "dtpNascimento";
+            this.dtpNascimento.Size = new System.Drawing.Size(190, 22);
+            this.dtpNascimento.TabIndex = 28;
             // 
-            // dataGridView1
+            // dgvListarUsuario
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 31);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(470, 458);
-            this.dataGridView1.TabIndex = 29;
+            this.dgvListarUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListarUsuario.Location = new System.Drawing.Point(0, 31);
+            this.dgvListarUsuario.Name = "dgvListarUsuario";
+            this.dgvListarUsuario.RowHeadersWidth = 51;
+            this.dgvListarUsuario.RowTemplate.Height = 24;
+            this.dgvListarUsuario.Size = new System.Drawing.Size(470, 458);
+            this.dgvListarUsuario.TabIndex = 29;
+            this.dgvListarUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListarUsuario_CellClick);
+            this.dgvListarUsuario.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvListarUsuario_CellMouseClick);
             // 
             // frmListarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 601);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dgvListarUsuario);
+            this.Controls.Add(this.dtpNascimento);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.NomeTxt);
             this.Controls.Add(this.label9);
@@ -376,7 +379,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbImage)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,8 +416,8 @@
         private System.Windows.Forms.ToolStripMenuItem iDToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nomeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobrenomeToolStripMenuItem;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker dtpNascimento;
+        private System.Windows.Forms.DataGridView dgvListarUsuario;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
     }
 }

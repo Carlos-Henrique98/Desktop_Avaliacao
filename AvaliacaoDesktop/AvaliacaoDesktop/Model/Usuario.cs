@@ -18,7 +18,7 @@ namespace AvaliacaoDesktop
 
         public string numero { get; set; }
 
-        public DateTime DataDeNascimento { get; set; }
+        public DateTime dataNascimento { get; set; }
 
         public string usuario { get; set; }
 

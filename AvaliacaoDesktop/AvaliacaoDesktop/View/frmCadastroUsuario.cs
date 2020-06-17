@@ -114,7 +114,7 @@ namespace AvaliacaoDesktop
                     sobrenome = SobrenomeTextBox.Text,
                     endereco = EnderecoTextBox.Text,
                     numero = NumeroTextBox.Text,
-                    DataDeNascimento = DataTp.Value, 
+                    dataNascimento = DataTp.Value, 
                     usuario = UsuarioTextBox.Text,
                     senha = SenhaTextBox.Text,
                     confirmaSenha = ConfirmaSenhaTextBox.Text
@@ -162,7 +162,6 @@ namespace AvaliacaoDesktop
             {
                 NomeTextBox.Text = "";
                 NomeTextBox.ForeColor = Color.Black;
-
             }
         }
 
@@ -171,8 +170,7 @@ namespace AvaliacaoDesktop
             if(NomeTextBox.Text == "")
             {
                 NomeTextBox.Text = "Digite o seu nome...";
-                NomeTextBox.ForeColor = Color.Silver;
-                 
+                NomeTextBox.ForeColor = Color.Silver;     
             }
         }
 

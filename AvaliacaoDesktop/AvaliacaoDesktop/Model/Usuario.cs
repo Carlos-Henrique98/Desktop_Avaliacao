@@ -18,6 +18,8 @@ namespace AvaliacaoDesktop
 
         public string numero { get; set; }
 
+        public DateTime DataDeNascimento { get; set; }
+
         public string usuario { get; set; }
 
         public string senha { get; set; }

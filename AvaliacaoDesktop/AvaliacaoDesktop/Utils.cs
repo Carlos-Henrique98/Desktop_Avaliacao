@@ -22,5 +22,19 @@ namespace AvaliacaoDesktop
             }
             return false;
         }
+
+        public bool campoVazio(Control controle,string campo)
+        {
+            if(controle.Text == "")
+            {
+                MessageBox.Show("O campo "+campo+" é obrigatório!");
+                controle.Focus();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

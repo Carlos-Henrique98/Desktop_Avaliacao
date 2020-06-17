@@ -24,11 +24,11 @@ namespace AvaliacaoDesktop
         {
            if(frmLogin.idioma == 0)
             {
-                MessageBox.Show("Inglês");
+                ConversaoIdioma.AlteraIdioma(this, "en");
             }
            else
             {
-                MessageBox.Show("Português");
+                ConversaoIdioma.AlteraIdioma(this, "pt");
             }
         }
 
@@ -71,37 +71,59 @@ namespace AvaliacaoDesktop
 
         }
 
-        
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            if(!Utils.temCamposVazio(this))
+            UsuarioRepository repository = new UsuarioRepository();
+            Regex senha = new Regex(
+               @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$", RegexOptions.IgnorePatternWhitespace);
+
+            if (NomeTextBox.Text.Trim().Length != 0 && NomeTextBox.ForeColor != Color.Black)
             {
+                MessageBox.Show("O campo Nome é obrigatório", "Erro");
+            }
+            else if (SobrenomeTextBox.Text.Trim().Length != 0 && SobrenomeTextBox.ForeColor != Color.Black)
+            {
+                MessageBox.Show("O campo Sobrenome é obrigatório", "Erro");
+            }
+            else if (UsuarioTextBox.Text.Trim().Length != 0 && UsuarioTextBox.ForeColor != Color.Black)
+            {
+                MessageBox.Show("O campo Usuário é obrigatório", "Erro");
+            }
+            else if (SenhaTextBox.Text.Trim().Length != 0 && SenhaTextBox.ForeColor != Color.Black)
+            {
+                MessageBox.Show("O campo Senha é obrigatório", "Erro");
+            }
+            else if (ConfirmaSenhaTextBox.Text.Trim().Length != 0 && ConfirmaSenhaTextBox.ForeColor != Color.Black)
+            {
+                MessageBox.Show("O campo Confirmar senha é obrigatório", "Erro");
+            }
+            else if (!senha.IsMatch(SenhaTextBox.Text))
+            {
+                MessageBox.Show("A senha deve ter pelo menos 8 caracteres – pelo menos 1 letra maiúscula, 1 letra minúscula e um número.", "Senha inválida");
+            }
+            else if (ConfirmaSenhaTextBox.Text != SenhaTextBox.Text)
+            {
+                MessageBox.Show("Os campos não são iguais", "Erro");
+            }
+          
+            else { 
+             
                 Usuario usuario = new Usuario
                 {
                     nome = NomeTextBox.Text,
                     sobrenome = SobrenomeTextBox.Text,
+                    endereco = EnderecoTextBox.Text,
+                    numero = NumeroTextBox.Text,
+                    DataDeNascimento = DataTp.Value, 
                     usuario = UsuarioTextBox.Text,
                     senha = SenhaTextBox.Text,
                     confirmaSenha = ConfirmaSenhaTextBox.Text
                 };
-                UsuarioRepository repository = new UsuarioRepository();
                 repository.adicionar(usuario);
 
                 MessageBox.Show("Dados Salvos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
-           
-                else if(NomeTextBox.Text.Trim().Length == 0 || SobrenomeTextBox.Text.Trim().Length == 0)
-                {
-                    MessageBox.Show("Campos não preenchidos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if(UsuarioTextBox.Text.Trim().Length == 0)
-                {
-                    MessageBox.Show("Campos não preenchidos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if(SenhaTextBox.Text.Trim().Length == 0)
-                {
-                    MessageBox.Show("Campos não preenchidos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
             
         }
 

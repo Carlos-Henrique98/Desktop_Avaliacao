@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConversaoIdioma.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Repositories\UsuarioRepository.cs" />
     <Compile Include="Utils.cs" />

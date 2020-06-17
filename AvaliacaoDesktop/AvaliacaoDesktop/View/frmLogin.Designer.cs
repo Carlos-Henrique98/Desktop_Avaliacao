@@ -82,9 +82,6 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(262, 22);
             this.txtUsuario.TabIndex = 10;
-            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
-            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsuario_KeyDown);
-            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // txtSenha
             // 
@@ -93,9 +90,6 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(262, 22);
             this.txtSenha.TabIndex = 10;
-            this.txtSenha.Enter += new System.EventHandler(this.txtSenha_Enter);
-            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyDown);
-            this.txtSenha.Leave += new System.EventHandler(this.txtSenha_Leave);
             // 
             // fotoPictureBox
             // 
@@ -187,6 +181,7 @@
             this.cblIdioma.Name = "cblIdioma";
             this.cblIdioma.Size = new System.Drawing.Size(180, 24);
             this.cblIdioma.TabIndex = 15;
+            this.cblIdioma.SelectedIndexChanged += new System.EventHandler(this.cblIdioma_SelectedIndexChanged);
             // 
             // frmLogin
             // 

@@ -45,7 +45,7 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnDelet = new System.Windows.Forms.Button();
             this.ImageUsuario_Box = new System.Windows.Forms.PictureBox();
-            this.DataTextBox = new System.Windows.Forms.DateTimePicker();
+            this.DataTp = new System.Windows.Forms.DateTimePicker();
             this.cbxAdmin = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageUsuario_Box)).BeginInit();
             this.SuspendLayout();
@@ -222,15 +222,15 @@
             this.ImageUsuario_Box.TabIndex = 16;
             this.ImageUsuario_Box.TabStop = false;
             // 
-            // DataTextBox
+            // DataTp
             // 
-            this.DataTextBox.CustomFormat = "dd-MM-yyyy";
-            this.DataTextBox.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DataTextBox.Location = new System.Drawing.Point(162, 164);
-            this.DataTextBox.Name = "DataTextBox";
-            this.DataTextBox.Size = new System.Drawing.Size(109, 22);
-            this.DataTextBox.TabIndex = 17;
-            this.DataTextBox.ValueChanged += new System.EventHandler(this.DataTextBox_ValueChanged);
+            this.DataTp.CustomFormat = "dd-MM-yyyy";
+            this.DataTp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DataTp.Location = new System.Drawing.Point(162, 164);
+            this.DataTp.Name = "DataTp";
+            this.DataTp.Size = new System.Drawing.Size(109, 22);
+            this.DataTp.TabIndex = 17;
+            this.DataTp.ValueChanged += new System.EventHandler(this.DataTextBox_ValueChanged);
             // 
             // cbxAdmin
             // 
@@ -248,7 +248,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 476);
             this.Controls.Add(this.cbxAdmin);
-            this.Controls.Add(this.DataTextBox);
+            this.Controls.Add(this.DataTp);
             this.Controls.Add(this.ImageUsuario_Box);
             this.Controls.Add(this.btnDelet);
             this.Controls.Add(this.btnAlterar);
@@ -299,7 +299,7 @@
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnDelet;
         private System.Windows.Forms.PictureBox ImageUsuario_Box;
-        private System.Windows.Forms.DateTimePicker DataTextBox;
+        private System.Windows.Forms.DateTimePicker DataTp;
         private System.Windows.Forms.CheckBox cbxAdmin;
     }
 }

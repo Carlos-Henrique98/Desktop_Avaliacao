@@ -24,38 +24,8 @@ namespace AvaliacaoDesktop
             this.MaximizeBox = false;
             this.MinimizeBox = false;
         }
-
-        private void txtUsuario_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsuario_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void txtSenha_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void txtSenha_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSenha_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        public static int idioma;
+ 
+        public static int idioma = -1;
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             idioma = cblIdioma.SelectedIndex;
@@ -170,5 +140,25 @@ namespace AvaliacaoDesktop
             lblTimer.Text = time;
         }
 
+       
+        private void cblIdioma_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            idioma = cblIdioma.SelectedIndex;
+            if(idioma == 0)
+            {
+                ConversaoIdioma.AlteraIdioma(this, "en");
+                txtSenha.PasswordChar = '\0';
+                txtSenha.ForeColor = Color.Silver;
+                txtUsuario.ForeColor = Color.Silver;
+            }
+            else
+            {
+                ConversaoIdioma.AlteraIdioma(this, "pt");
+                txtSenha.PasswordChar = '\0';
+                txtSenha.ForeColor = Color.Silver;
+                txtUsuario.ForeColor = Color.Silver;
+
+            }
+        }
     }
 }

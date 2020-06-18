@@ -59,7 +59,7 @@ namespace AvaliacaoDesktop
 
             if(dr == DialogResult.Yes)
             {
-                repository.deletar(x.codigo);
+                repository.deletar(x.Id);
             }
         }
 

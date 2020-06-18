@@ -15,9 +15,11 @@ namespace AvaliacaoDesktop
     public partial class frmCadastroUsuario : Form
     {
         private Usuario usuario = null;
+
         public frmCadastroUsuario()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void frmCadastroUsuario_Load(object sender, EventArgs e)
@@ -129,31 +131,9 @@ namespace AvaliacaoDesktop
 
         private void btnDelet_Click(object sender, EventArgs e)
         {
-            
+            ImageUsuario_Box.Image = null;
         }
 
-        private bool SenhaTextBox_TextChanged(string senha)
-        {
-            if(senha.Length >= 8)
-            {
-                string pattern = "[a-z]{1,}";
-
-                if(Regex.IsMatch(senha,pattern))
-                {
-                    pattern = "[A-Z]{1,}";
-
-                    if(Regex.IsMatch(senha,pattern))
-                    {
-                        pattern = "[0,9]{1,}";
-                        if(Regex.IsMatch(senha,pattern))
-                        {
-                            return true;
-                        }
-                    }
-                }
-            }
-            return false;
-        }
 
         //Na edição dos campos, trabalhar com place holder conforme apresentado na tela acima.
         private void NomeTextBox_Enter(object sender, EventArgs e)

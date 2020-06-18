@@ -20,7 +20,7 @@ namespace AvaliacaoDesktop.Repositories
 
                 usuarios.Add(new Usuario
                 {
-                    codigo = 1,
+                    Id = 1,
                     nome = "Gabriel",
                     sobrenome = "Santos",
                     dataNascimento = Convert.ToDateTime("09/02/1968"),
@@ -32,7 +32,7 @@ namespace AvaliacaoDesktop.Repositories
                 contador++;
                 usuarios.Add(new Usuario
                 {
-                   codigo = 2,
+                   Id = 2,
                    nome = "Guilherme",
                    sobrenome = "Borges",
                    dataNascimento = Convert.ToDateTime("16/08/2000"),
@@ -52,7 +52,7 @@ namespace AvaliacaoDesktop.Repositories
 
         public void adicionar(Usuario usuario)
         {
-            usuario.codigo = contador;
+            usuario.Id = contador;
 
             usuarios.Add(usuario);
             contador++;
@@ -60,19 +60,19 @@ namespace AvaliacaoDesktop.Repositories
 
         public void editar (Usuario usuario)
         {
-            Usuario u = usuarios.Find(x => x.codigo == usuario.codigo);
+            Usuario u = usuarios.Find(x => x.Id == usuario.Id);
             usuarios[usuarios.IndexOf(u)] = usuario;
         }
 
         public void deletar(int codigo)
         {
-            Usuario usuario = usuarios.Find(x => x.codigo == codigo);
+            Usuario usuario = usuarios.Find(x => x.Id == codigo);
             usuarios.Remove(usuario);
         }
 
         public Usuario BuscarPorId(int codigo)
         {
-            return usuarios.FirstOrDefault(x => x.codigo == codigo);
+            return usuarios.FirstOrDefault(x => x.Id == codigo);
         }
     }
 }

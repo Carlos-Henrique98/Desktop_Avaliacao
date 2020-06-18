@@ -8,7 +8,7 @@ namespace AvaliacaoDesktop
 {
     class Usuario
     {
-        public int codigo { get; set; }
+        public int Id { get; set; }
 
         public string nome { get; set; }
 

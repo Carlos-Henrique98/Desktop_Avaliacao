@@ -22,6 +22,13 @@ namespace AvaliacaoDesktop
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
+        public frmCadastroUsuario(Usuario usuario)
+        {
+            InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.usuario = usuario
+        }
+
         private void frmCadastroUsuario_Load(object sender, EventArgs e)
         {
            if(frmLogin.idioma == 0)
@@ -116,12 +123,12 @@ namespace AvaliacaoDesktop
                     sobrenome = SobrenomeTextBox.Text,
                     endereco = EnderecoTextBox.Text,
                     numero = NumeroTextBox.Text,
-                    dataNascimento = DataTp.Value, 
+                    dataNascimento = Convert.ToDateTime(DataTp.Value), 
                     usuario = UsuarioTextBox.Text,
                     senha = SenhaTextBox.Text,
                     confirmaSenha = ConfirmaSenhaTextBox.Text
                 };
-                repository.adicionar(usuario);
+                repository.editar(usuario);
 
                 MessageBox.Show("Dados Salvos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();

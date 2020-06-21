@@ -10,20 +10,20 @@ namespace AvaliacaoDesktop
     {
         public int Id { get; set; }
 
-        public string nome { get; set; }
+        public string Nome { get; set; }
 
-        public string sobrenome { get; set; }
+        public string Sobrenome { get; set; }
 
-        public string endereco { get; set; }
+        public string Endereco { get; set; }
 
-        public string numero { get; set; }
+        public string Numero { get; set; }
 
         public DateTime dataNascimento { get; set; }
 
-        public string usuario { get; set; }
+        public string UserName { get; set; }
 
-        public string senha { get; set; }
+        public string Senha { get; set; }
 
-        public string confirmaSenha { get; set; }
+        public string ConfirmaSenha { get; set; }
     }
 }

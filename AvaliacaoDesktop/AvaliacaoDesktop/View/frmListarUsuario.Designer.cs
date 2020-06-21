@@ -53,15 +53,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.NomeTxt = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.iDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sobrenomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
             this.dgvListarUsuario = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImage)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -281,44 +275,6 @@
             this.label10.TabIndex = 25;
             this.label10.Text = "Nome:";
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.iDToolStripMenuItem,
-            this.nomeToolStripMenuItem,
-            this.sobrenomeToolStripMenuItem,
-            this.sairToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(875, 28);
-            this.menuStrip1.TabIndex = 26;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // iDToolStripMenuItem
-            // 
-            this.iDToolStripMenuItem.Name = "iDToolStripMenuItem";
-            this.iDToolStripMenuItem.Size = new System.Drawing.Size(38, 24);
-            this.iDToolStripMenuItem.Text = "ID";
-            // 
-            // nomeToolStripMenuItem
-            // 
-            this.nomeToolStripMenuItem.Name = "nomeToolStripMenuItem";
-            this.nomeToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
-            this.nomeToolStripMenuItem.Text = "Nome";
-            // 
-            // sobrenomeToolStripMenuItem
-            // 
-            this.sobrenomeToolStripMenuItem.Name = "sobrenomeToolStripMenuItem";
-            this.sobrenomeToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
-            this.sobrenomeToolStripMenuItem.Text = "Sobrenome";
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(48, 24);
-            this.sairToolStripMenuItem.Text = "Sair";
-            // 
             // dtpNascimento
             // 
             this.dtpNascimento.Location = new System.Drawing.Point(628, 296);
@@ -329,13 +285,14 @@
             // dgvListarUsuario
             // 
             this.dgvListarUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListarUsuario.Location = new System.Drawing.Point(0, 31);
+            this.dgvListarUsuario.Location = new System.Drawing.Point(0, -1);
             this.dgvListarUsuario.Name = "dgvListarUsuario";
             this.dgvListarUsuario.RowHeadersWidth = 51;
             this.dgvListarUsuario.RowTemplate.Height = 24;
-            this.dgvListarUsuario.Size = new System.Drawing.Size(470, 458);
-            this.dgvListarUsuario.TabIndex = 29;
+            this.dgvListarUsuario.Size = new System.Drawing.Size(464, 508);
+            this.dgvListarUsuario.TabIndex = 0;
             this.dgvListarUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListarUsuario_CellClick);
+            this.dgvListarUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListarUsuario_CellContentClick);
             this.dgvListarUsuario.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvListarUsuario_CellMouseClick);
             // 
             // frmListarUsuario
@@ -370,15 +327,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmListarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listar usuários - AirSystem";
             ((System.ComponentModel.ISupportInitialize)(this.pcbImage)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -412,12 +365,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox NomeTxt;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem iDToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nomeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sobrenomeToolStripMenuItem;
         private System.Windows.Forms.DateTimePicker dtpNascimento;
         private System.Windows.Forms.DataGridView dgvListarUsuario;
-        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
     }
 }
